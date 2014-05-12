@@ -63,7 +63,7 @@ public class DataImporter {
 			if (!cmd.hasOption("st")) {
 				System.out
 						.println("Start Date not specified! Using Jan 1st 2006 as Start Date");
-				st = "2006-01-01;00-00-00";
+				st = "2006-01-01;00:00:00";
 			} else {
 				st = cmd.getOptionValue("st");
 				System.out.println("Read Start Date=" + st);

@@ -11,16 +11,16 @@ public class WebUtils {
 	public static String getJSONData(String server, String path, String query,
 			String type, String lang, int offset, int perPage, long minTime,
 			long maxTime, String apiKey) {
-		URL oracle = null;
+		URL url = null;
 		try {
-			oracle = new URL("http://" + server + "/" + path + "?q=" + query
+			url = new URL("http://" + server + "/" + path + "?q=" + query
 					+ "&type=" + type + "&allow_lang=" + lang + "&offset="
 					+ offset + "&perpage=" + perPage + "&mintime=" + minTime
 					+ "&maxtime=" + maxTime + "&apikey=" + apiKey);
-			System.out.println(oracle);
+			System.out.println(url);
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(
-					oracle.openStream()));
+					url.openStream()));
 
 			String inputLine = in.readLine();
 			StringBuffer sb = new StringBuffer();
